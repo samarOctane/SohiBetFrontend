@@ -1,4 +1,4 @@
-import { React, useState, useEffect } from 'react'
+import { React, useState, useEffect, useCallback } from 'react'
 import { Link } from 'react-router-dom';
 import './Aviator.css'
 import { FaRupeeSign } from "react-icons/fa";
@@ -9,6 +9,7 @@ import { IoIosTimer } from "react-icons/io";
 import PredictionHistory from './PredictionHistory';
 import WaitProgress from './WaitProgress';
 import { CgProfile } from "react-icons/cg";
+import MoneyInput from '../../UserMoney/MoneyInput';
 
 const Aviator = ({ increaserFirstEarned, earnedFirst, handleBlur2, betAmount2, isEditing2, handleClick2, handleChange2, betAmount1, isEditing, handleBlur1, handleChange1, handleClick1, addMoney2, money2, addedMoney2, canCollect2, collectMoney2, moneyDeducted2, addMoneyClicked2, firstBetValue, secondBetValue, increaseBet1, increaseBet2, decreaseBet1, decreaseBet2, money, addedMoney, balance, addMoney, collectMoney, multiplier, waiting, addMoneyClicked, moneyDeducted, canCollect }) => {
 
@@ -44,8 +45,31 @@ const Aviator = ({ increaserFirstEarned, earnedFirst, handleBlur2, betAmount2, i
         transition: "opacity 3s linear, top 1s linear",
     };
 
+    ////////////////////////////////////////////////////////////////////////////////////////////
+    const [savedMoney, setSavedMoney] = useState(null);
+
+    const fetchMoney = useCallback(async () => {
+        try {
+            const response = await fetch("http://localhost:5200/money");
+            const data = await response.json();
+            if (data.latestMoney) {
+                setSavedMoney(data.latestMoney.amount);
+            }
+        } catch (error) {
+            console.error("Error fetching money:", error);
+        }
+    }, []);
+
+    useEffect(() => {
+        fetchMoney();
+    }, [fetchMoney]);
+
+    //////////////////////////////////////////////////////////////////////////////////////////////
     return (
         <div className="MainBox">
+            <div>
+                <MoneyInput balance={balance} fetchMoney={fetchMoney} />
+            </div>
             <div className="anotheSideBox">
 
             </div>
@@ -63,7 +87,10 @@ const Aviator = ({ increaserFirstEarned, earnedFirst, handleBlur2, betAmount2, i
                         <div style={{
                             display: "flex", justifyContent: "center",
                             alignItems: "center"
-                        }}><div id="money"><h4 style={{ margin: "0", color: "#42f54b", fontSize: "3vh" }}>{balance.toFixed(2)}</h4><h4 style={{ marginLeft: "4px", color: "white", marginTop: "1px", fontSize: "2vh" }}>INR</h4></div></div>
+                        }}><div id="money">
+                                <h4 style={{ margin: "0", color: "#42f54b", fontSize: "3vh" }}>{savedMoney !== null ? `${savedMoney.toFixed(2)}` : "Loading..."}</h4>
+                                
+                                <h4 style={{ marginLeft: "4px", color: "white", marginTop: "1px", fontSize: "2vh" }}>INR</h4></div></div>
                         <div className="profile">
                             <Link to="/Signup" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
                                 <CgProfile id="profile" />

@@ -9,11 +9,17 @@ import Bet from './Games/Aviator/Bet';
 import Check from './Games/Aviator/Check';
 import Login from './LoginSignup/Login/Login';
 import Signup from './LoginSignup/SignUp/Signup';
+import MoneyInput from './UserMoney/MoneyInput';
 
 const App = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
+
+  },
+  {
+    path: "/MoneyInput",
+    element: <MoneyInput/>,
 
   },
   {
