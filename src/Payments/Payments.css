@@ -1,0 +1,16 @@
+.PaymentsMain{
+    height:99vh;
+    width:99vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#QRCode{
+    background-image: url('../../public/QRcode.jpeg');
+    background-size: 100% 100%;
+	background-repeat: no-repeat;
+
+    height: 55vmin;
+    width:55vmin;
+}
