@@ -1,11 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect,useCallback } from "react";
 import Aviator from "./Aviator";
 
-export default function Bet() {
+const Bet=()=>{
 
     const [multiplier, setMultiplier] = useState(1);
     const [money, setMoney] = useState(2);
-    const [balance, setBalance] = useState(100);
+    const [balance, setBalance] = useState(100); //disbale for backend
     const [canCollect, setCanCollect] = useState(false);
     const [waiting, setWaiting] = useState(false);
     const [addedMoney, setAddedMoney] = useState(0);
@@ -18,6 +18,28 @@ export default function Bet() {
 
     const [earnedFirst, setEarnedFirst] = useState(0);
     const [increaserFirstEarned, setIncreaserFirstEarned] = useState(0);
+
+    /////////////////////////////////////////////////////////////////////
+
+    // const [balance, setBalance] = useState();
+    // const [savedMoney, setSavedMoney] = useState(null);
+
+    const fetchMoney = useCallback(async () => {
+        try {
+            const response = await fetch("https://sohibetmoney.onrender.com/money");
+            const data = await response.json();
+            if (data.latestMoney) {
+                // setBalance(data.latestMoney.amount);
+            }
+        } catch (error) {
+            console.error("Error fetching money:", error);
+        }
+    }, []);
+
+    useEffect(() => {
+        fetchMoney();
+    }, [fetchMoney]);
+    
     //////////////////////////////////////////////////////////////////////
 
     const [money2, setMoney2] = useState(2);
@@ -156,7 +178,7 @@ export default function Bet() {
         setFirstBetValue(() => Number(firstBetValue) - 1)
     }
 
-    
+
     const increaseBet2 = () => {
         setSecondBetValue(() => Number(secondBetValue) + 1)
     }
@@ -170,3 +192,5 @@ export default function Bet() {
         </div>
     );
 }
+
+export default Bet

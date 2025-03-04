@@ -1,9 +1,63 @@
 .MainBox {
-    height: 99vh;
+    /* height: 99vh;
     width: 100vw;
     display: flex;
     justify-content: center;
+    align-items: center; */
+
+    display: flex;
+    height: 99vh;
+    width: 100vw;
+}
+.box2{
+    height: 99vh;
+    width: 50%;
+    display: flex;
+    justify-content: center;
     align-items: center;
+}
+.box1{
+    width: 100%;
+    height: 45%;
+    background-color: #3b3f47;
+}
+
+
+@media (max-width: 768px) {
+    .MainBox {
+        flex-direction: column-reverse;
+        /* height: 199vh;  */
+        height: 140vh;    
+    }
+    .box2{
+        height: 90%;
+        width:100%;
+    }
+}
+@media (max-width: 1024px) {
+    .MainBox {
+        flex-direction: column-reverse;
+    }
+    
+}
+@media (max-width: 1180px) {
+    .MainBox {
+        flex-direction: column-reverse;
+    }
+    .box2{
+        height: 90%;
+        width:100%;
+    }
+}
+@media (max-width: 1366px) {
+    .MainBox {
+        flex-direction: column-reverse;
+    }
+    .box2{
+        height: 90%;
+        width:100%;
+    }
+    
 }
 
 .AviatorMain {
@@ -13,27 +67,11 @@
     /* border:1px solid black; */
 }
 
-.anotheSideBox {
-    width: 53vw;
-    height: 100%;
-    border: 1px solid black;
-    display: none;
-}
 
 @media (min-width: 601px) and (max-width: 1024px) {
     .AviatorMain {
         width: 38vw;
-    }
-
-    .anotheSideBox {
-
-        display: block;
-    }
-}
-
-@media (min-width: 1025px) {
-    .AviatorMain {
-        width: 38vw;
+        width: 70%;
     }
 
     .anotheSideBox {
@@ -54,7 +92,7 @@
 
 #subAviatorMain1_part1 {
     height: 100%;
-    width: 35%;
+    width: 50%;
     /* border:1px solid black; */
     display: flex;
     justify-content: center;
@@ -63,7 +101,7 @@
 
 #subAviatorMain1_part2 {
     height: 100%;
-    width: 65%;
+    width: 50%;
     /* border:1px solid black; */
 
     display: flex;

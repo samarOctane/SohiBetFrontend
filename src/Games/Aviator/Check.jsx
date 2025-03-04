@@ -1,36 +1,30 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import './Check.css'
 
-const Check = () => {
-  const [start, setStart] = useState(false);
+export default function Check() {
+  const [user, setUser] = useState({
+    name: "Alice",
+    username: "alice123",
+    balance: 1000,
+  });
 
-  useEffect(() => {
-    setTimeout(() => {
-      setStart(true);
-    }, 500);
-  }, []);
-
-  const containerStyle = {
-    width: "300px",
-    height: "20px",
-    backgroundColor: "#ddd",
-    borderRadius: "10px",
-    overflow: "hidden",
-    boxShadow: "0 2px 5px rgba(0, 0, 0, 0.2)",
-    margin: "100px auto",
-  };
-
-  const progressBarStyle = {
-    width: start ? "100%" : "0%",
-    height: "100%",
-    backgroundColor: "#4caf50",
-    transition: "width 7s linear",
+  const withdraw = () => {
+    if (user.balance >= 100) {
+      setUser({ ...user, balance: user.balance - 100 });
+    }
   };
 
   return (
-    <div style={containerStyle}>
-      <div style={progressBarStyle}></div>
+    <div className="container">
+      <div className="card">
+        <div className="profile-icon">{user.name.charAt(0)}</div>
+        <h2>{user.name}</h2>
+        <p>@{user.username}</p>
+        <p className="balance">Balance: ${user.balance}</p>
+        <button className="withdraw-button" onClick={withdraw}>Withdraw $100</button>
+      </div>
     </div>
   );
-};
+}
 
-export default Check;
+

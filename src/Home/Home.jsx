@@ -30,9 +30,7 @@ const Home = () => {
             </div>
           </div>
           <div className="subHeader" id="subHeader2">
-            <Link to="/Payments" style={{ textDecoration: 'none' }}>
-              <div id="money"><FaRupeeSign id="rupee" /><h2 style={{ margin: "0" }}>0.00</h2></div>
-            </Link>
+            {/* <div id="money"><FaRupeeSign id="rupee" /><h2 style={{ margin: "0" }}>0.00</h2></div> */}
           </div>
           <div className="subHeader" id="subHeader3">
             <div className="subHeader3Child" id="notification">

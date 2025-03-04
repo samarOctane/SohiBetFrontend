@@ -22,7 +22,7 @@ const MoneyInput = ({ balance,fetchMoney }) => {
 
     const saveMoney = async (amount) => {
         try {
-            const response = await fetch("http://localhost:5200/money", {
+            const response = await fetch("http://localhost:5210/money", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
