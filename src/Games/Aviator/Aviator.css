@@ -40,19 +40,13 @@
     }
     
 }
-@media (max-width: 1180px) {
-    .MainBox {
-        flex-direction: column-reverse;
-    }
+@media (max-width: 1180px) {   
     .box2{
         height: 90%;
         width:100%;
     }
 }
 @media (max-width: 1366px) {
-    .MainBox {
-        flex-direction: column-reverse;
-    }
     .box2{
         height: 90%;
         width:100%;
