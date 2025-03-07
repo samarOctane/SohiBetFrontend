@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/SohiBetFrontend/static/css/main.a19b563c.css",
+    "main.css": "/SohiBetFrontend/static/css/main.f466e252.css",
     "main.js": "/SohiBetFrontend/static/js/main.4c245c5a.js",
     "static/media/number.png": "/SohiBetFrontend/static/media/number.626cc3333d5a1283ac15.png",
     "static/media/flying aviator.gif": "/SohiBetFrontend/static/media/flying aviator.52ce8a94b9e00a9b7025.gif",
@@ -9,11 +9,11 @@
     "static/media/QRcode.jpeg": "/SohiBetFrontend/static/media/QRcode.69b7c597ee7c916bbe5e.jpeg",
     "static/media/goog.png": "/SohiBetFrontend/static/media/goog.b29f36ea5ff9ae56d937.png",
     "index.html": "/SohiBetFrontend/index.html",
-    "main.a19b563c.css.map": "/SohiBetFrontend/static/css/main.a19b563c.css.map",
+    "main.f466e252.css.map": "/SohiBetFrontend/static/css/main.f466e252.css.map",
     "main.4c245c5a.js.map": "/SohiBetFrontend/static/js/main.4c245c5a.js.map"
   },
   "entrypoints": [
-    "static/css/main.a19b563c.css",
+    "static/css/main.f466e252.css",
     "static/js/main.4c245c5a.js"
   ]
 }
