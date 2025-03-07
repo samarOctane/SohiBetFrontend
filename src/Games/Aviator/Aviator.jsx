@@ -72,13 +72,13 @@ const Aviator = ({ increaserFirstEarned, earnedFirst, handleBlur2, betAmount2, i
 
             </div>
             <div className="box1">
-                <div style={{ height: "20%", width: "100%"}}>
+                <div style={{ height: "20%", width: "100%" }}>
 
                 </div>
-                <div style={{ height: "80%", width: "100%"}}>
+                <div style={{ height: "80%", width: "100%" }}>
                     {[1, 1, 1, 1, 1, 1, 1, 1, 1, 1].map(() => {
                         return (
-                            <div style={{ height: "10%", width: "100%", border: "1px solid white",backgroundColor:"black" }}>
+                            <div style={{ height: "10%", width: "100%", border: "1px solid white", backgroundColor: "black" }}>
                                 <h1></h1>
                             </div>
                         );
@@ -189,381 +189,378 @@ const Aviator = ({ increaserFirstEarned, earnedFirst, handleBlur2, betAmount2, i
                         </div>
 
                     </div>
+                    {/* <div className="maintainHeight"></div> */}
                     <div className="subAviatorMain" id="subAviatorMain3">
-                        <div className="sub_subAviatorMain" id="sub_subAviatorMain3" style={{ height: betPart1Height }}>
-                            <div className="part1_sub_subAviatorMain" id="part1_sub_subAviatorMain3">
-                                <div id="MainBet">
-                                    <div className="Bet" id="Bet1" style={{ backgroundColor: isBet1 ? "black" : "#4c4949" }}><button onClick={switchToAuto1} style={{ height: "100%", width: "100%", border: "none", backgroundColor: isBet1 ? "black" : "#4c4949", borderRadius: "50%" }}><h4 style={{ color: "white", fontSize: "2vh" }}>Bet</h4></button></div>
-                                    <div className="Bet" id="BetAuto1" style={{ backgroundColor: isBet1 ? "#4c4949" : "black" }}><button onClick={switchToAuto1} style={{ height: "100%", width: "100%", border: "none", backgroundColor: isBet1 ? "#4c4949" : "black", borderRadius: "50%" }}><h4 style={{ color: "white", fontSize: "2vh" }}>Auto</h4></button></div>
+                        <div className="BetPart1">
+                            {/* <div className="sub_subAviatorMain" id="sub_subAviatorMain3" style={{ height: betPart1Height }}> */}
+                            <div className="sub_subAviatorMain" id="sub_subAviatorMain3">
+                                <div className="part1_sub_subAviatorMain" id="part1_sub_subAviatorMain3">
+                                    <div id="MainBet">
+                                        <div className="Bet" id="Bet1" style={{ backgroundColor: isBet1 ? "black" : "#4c4949" }}><button onClick={switchToAuto1} style={{ height: "100%", width: "100%", border: "none", backgroundColor: isBet1 ? "black" : "#4c4949", borderRadius: "50%" }}><h4 style={{ color: "white", fontSize: "2vh" }}>Bet</h4></button></div>
+                                        <div className="Bet" id="BetAuto1" style={{ backgroundColor: isBet1 ? "#4c4949" : "black" }}><button onClick={switchToAuto1} style={{ height: "100%", width: "100%", border: "none", backgroundColor: isBet1 ? "#4c4949" : "black", borderRadius: "50%" }}><h4 style={{ color: "white", fontSize: "2vh" }}>Auto</h4></button></div>
 
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="part2_sub_subAviatorMain" id="part1_sub_subAviatorMain3">
-                                <div className="BetButtonIncrease" id="BetButtonIncrease1">
-                                    <div className="BetButtonIncrease11">
-                                        <div style={{
-                                            width: "3vh", height: "3vh", border: "1px solid black", borderRadius: "50%", borderColor: "#ffffff80", display: "flex",
-                                            justifyContent: "center",
-                                            alignItems: "center"
-                                        }}><button onClick={decreaseBet1} style={{ color: "#ffffff80", backgroundColor: "black", width: "100%", height: "100%", borderRadius: "50%", border: "none" }}><h2 style={{ fontSize: "2vh" }}>-</h2></button></div>
-                                        <div>
+                                <div className="part2_sub_subAviatorMain" id="part1_sub_subAviatorMain3">
+                                    <div className="BetButtonIncrease" id="BetButtonIncrease1">
+                                        <div className="BetButtonIncrease11">
+                                            <div style={{
+                                                width: "3vh", height: "3vh", border: "1px solid black", borderRadius: "50%", borderColor: "#ffffff80", display: "flex",
+                                                justifyContent: "center",
+                                                alignItems: "center"
+                                            }}><button onClick={decreaseBet1} style={{ color: "#ffffff80", backgroundColor: "black", width: "100%", height: "100%", borderRadius: "50%", border: "none" }}><h2 style={{ fontSize: "2vh" }}>-</h2></button></div>
                                             <div>
-                                                {isEditing ? (
-                                                    <input
-                                                        style={{
-                                                            width: "62px",
-                                                            height: "25px",
-                                                            resize: "none",
-                                                            fontSize: "14px",
-                                                            padding: "5px",
-                                                            borderRadius: "5px",
-                                                            border: "1px solid #ccc",
-                                                            outline: "none",
-                                                            textAlign: "center",
-                                                        }}
-                                                        type="number"
-                                                        value={betAmount1}
-                                                        onChange={handleChange1}
-                                                        onBlur={handleBlur1}
-                                                        autoFocus
-                                                    />
-                                                ) : (
-                                                    <h3 style={{ color: "white", fontSize: "2vh" }} onClick={handleClick1} >{Number(firstBetValue).toFixed(2)}</h3>
-                                                )}
+                                                <div>
+                                                    {isEditing ? (
+                                                        <input
+                                                            style={{
+                                                                width: "62px",
+                                                                height: "25px",
+                                                                resize: "none",
+                                                                fontSize: "14px",
+                                                                padding: "5px",
+                                                                borderRadius: "5px",
+                                                                border: "1px solid #ccc",
+                                                                outline: "none",
+                                                                textAlign: "center",
+                                                            }}
+                                                            type="number"
+                                                            value={betAmount1}
+                                                            onChange={handleChange1}
+                                                            onBlur={handleBlur1}
+                                                            autoFocus
+                                                        />
+                                                    ) : (
+                                                        <h3 style={{ color: "white", fontSize: "2vh" }} onClick={handleClick1} >{Number(firstBetValue).toFixed(2)}</h3>
+                                                    )}
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div style={{
-                                            width: "3vh", height: "3vh", border: "1px solid black", borderRadius: "50%", borderColor: "#ffffff80", display: "flex",
-                                            justifyContent: "center",
-                                            alignItems: "center"
-                                        }}><button onClick={increaseBet1} style={{ color: "#ffffff80", backgroundColor: "black", width: "100%", height: "100%", borderRadius: "50%", border: "none" }}><h2 style={{ fontSize: "2vh" }}>+</h2></button></div>
-                                    </div>
-                                    <div className="BetButtonIncrease12">
-                                        <div className="BetButtonIncrease12_part">
                                             <div style={{
-                                                width: "68%",
-                                                height: "100%",
-                                                border: "1px solid black",
-                                                borderRadius: "10px",
-                                                display: "flex",
+                                                width: "3vh", height: "3vh", border: "1px solid black", borderRadius: "50%", borderColor: "#ffffff80", display: "flex",
                                                 justifyContent: "center",
-                                                alignItems: "center",
-                                                color: "#ffffff80",
-                                                backgroundColor: "black",
-                                            }}>
-                                                <h1 style={{ fontSize: "2vh" }}>50.00</h1>
-                                            </div>
+                                                alignItems: "center"
+                                            }}><button onClick={increaseBet1} style={{ color: "#ffffff80", backgroundColor: "black", width: "100%", height: "100%", borderRadius: "50%", border: "none" }}><h2 style={{ fontSize: "2vh" }}>+</h2></button></div>
+                                        </div>
+                                        <div className="BetButtonIncrease12">
+                                            <div className="BetButtonIncrease12_part">
+                                                <div style={{
+                                                    width: "68%",
+                                                    height: "100%",
+                                                    border: "1px solid black",
+                                                    borderRadius: "10px",
+                                                    display: "flex",
+                                                    justifyContent: "center",
+                                                    alignItems: "center",
+                                                    color: "#ffffff80",
+                                                    backgroundColor: "black",
+                                                }}>
+                                                    <h1 style={{ fontSize: "2vh" }}>50.00</h1>
+                                                </div>
 
-                                            <div style={{
-                                                width: "68%",
-                                                height: "100%",
-                                                border: "1px solid black",
-                                                borderRadius: "10px",
-                                                display: "flex",
-                                                justifyContent: "center",
-                                                alignItems: "center",
-                                                color: "#ffffff80",
-                                                backgroundColor: "black",
-                                            }}>
-                                                <h1 style={{ fontSize: "2vh" }}>100.00</h1>
+                                                <div style={{
+                                                    width: "68%",
+                                                    height: "100%",
+                                                    border: "1px solid black",
+                                                    borderRadius: "10px",
+                                                    display: "flex",
+                                                    justifyContent: "center",
+                                                    alignItems: "center",
+                                                    color: "#ffffff80",
+                                                    backgroundColor: "black",
+                                                }}>
+                                                    <h1 style={{ fontSize: "2vh" }}>100.00</h1>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div className="BetButtonIncrease12_part">
-                                            <div style={{
-                                                width: "68%",
-                                                height: "100%",
-                                                border: "1px solid black",
-                                                borderRadius: "10px",
-                                                display: "flex",
-                                                justifyContent: "center",
-                                                alignItems: "center",
-                                                color: "#ffffff80",
-                                                backgroundColor: "black",
-                                            }}>
-                                                <h1 style={{ fontSize: "2vh" }}>150.00</h1>
-                                            </div>
-                                            <div style={{
-                                                width: "68%",
-                                                height: "100%",
-                                                border: "1px solid black",
-                                                borderRadius: "10px",
-                                                display: "flex",
-                                                justifyContent: "center",
-                                                alignItems: "center",
-                                                color: "#ffffff80",
-                                                backgroundColor: "black"
-                                            }}>
-                                                <h1 style={{ fontSize: "2vh" }}>200.00</h1>
+                                            <div className="BetButtonIncrease12_part">
+                                                <div style={{
+                                                    width: "68%",
+                                                    height: "100%",
+                                                    border: "1px solid black",
+                                                    borderRadius: "10px",
+                                                    display: "flex",
+                                                    justifyContent: "center",
+                                                    alignItems: "center",
+                                                    color: "#ffffff80",
+                                                    backgroundColor: "black",
+                                                }}>
+                                                    <h1 style={{ fontSize: "2vh" }}>150.00</h1>
+                                                </div>
+                                                <div style={{
+                                                    width: "68%",
+                                                    height: "100%",
+                                                    border: "1px solid black",
+                                                    borderRadius: "10px",
+                                                    display: "flex",
+                                                    justifyContent: "center",
+                                                    alignItems: "center",
+                                                    color: "#ffffff80",
+                                                    backgroundColor: "black"
+                                                }}>
+                                                    <h1 style={{ fontSize: "2vh" }}>200.00</h1>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
+                                    <div className="BetButton" id="BetButton1">
+                                        {!addMoneyClicked ? (
+                                            <button
+                                                className="BetOnClick"
+                                                style={{ width: "85%", height: "83%" }}
+                                                onClick={addMoney}
+                                                disabled={balance < 2 || firstBetValue > balance || !waiting || moneyDeducted || addMoneyClicked}
+                                            >
+                                                <h1 style={{ fontSize: "3vh" }}>{Number(firstBetValue).toFixed(2)} <span>INR</span></h1>
+                                            </button>
+                                        ) : (
+                                            <button
+                                                className="BetOnClick"
+                                                style={{ width: "85%", height: "83%" }}
+                                                onClick={collectMoney}
+                                                disabled={!canCollect || waiting || addedMoney === 0}
+                                            >
+                                                {waiting ? <h1>Wait...</h1> : canCollect ? <div><h2 style={{ fontSize: "3vh" }}>CASH OUT</h2> <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}><h2 style={{ fontSize: "3vh" }}>{Number(money).toFixed(2)}</h2><h2 style={{ marginLeft: "4px", fontSize: "3vh" }}>INR</h2></div></div> : <h1>Collected</h1>}
+
+                                            </button>
+                                        )}
+                                    </div>
+
                                 </div>
-                                <div className="BetButton" id="BetButton1">
-                                    {!addMoneyClicked ? (
-                                        <button
-                                            className="BetOnClick"
-                                            style={{ width: "85%", height: "83%" }}
-                                            onClick={addMoney}
-                                            disabled={balance < 2 || firstBetValue > balance || !waiting || moneyDeducted || addMoneyClicked}
-                                        >
-                                            <h1 style={{ fontSize: "3vh" }}>{Number(firstBetValue).toFixed(2)} <span>INR</span></h1>
-                                        </button>
-                                    ) : (
-                                        <button
-                                            className="BetOnClick"
-                                            style={{ width: "85%", height: "83%" }}
-                                            onClick={collectMoney}
-                                            disabled={!canCollect || waiting || addedMoney === 0}
-                                        >
-                                            {waiting ? <h1>Wait...</h1> : canCollect ? <div><h2 style={{ fontSize: "3vh" }}>CASH OUT</h2> <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}><h2 style={{ fontSize: "3vh" }}>{Number(money).toFixed(2)}</h2><h2 style={{ marginLeft: "4px", fontSize: "3vh" }}>INR</h2></div></div> : <h1>Collected</h1>}
-
-                                        </button>
-                                    )}
-                                </div>
-
-                            </div>
-                            <div className="AutoPlay" style={{ display: autoPlayDisplay1, backgroundColor: "#4c4949" }}>
-                                <div className="AutoPlay2">
-                                    <div className="subAutoPlay" id="AutoplayLogo" style={{ width: "41%", display: "flex", justifyContent: "center" }}>
-                                        <div style={{ display: "flex", alignItems: "center" }}>
-                                            <h6 style={{ color: "white" }}>Auto Bet</h6>
-                                        </div>
-                                        <div className="subAutoPlay" id="AutoCashOut" style={{ marginLeft: "4px" }}>
-                                            <AutoCashButton />
-                                        </div>
-                                    </div>
-
-                                    <div className="subAutoPlay" id="AutoCashOut" style={{ display: "flex", alignItems: "center", width: "59%", height: "100%", justifyContent: "center" }}>
-                                        <div style={{ display: "flex", alignItems: "center" }}>
-                                            <div>
-                                                <h6 style={{ color: "white" }}>Auto Cash Out</h6>
+                                <div className="AutoPlay" style={{ display: autoPlayDisplay1, backgroundColor: "#4c4949" }}>
+                                    <div className="AutoPlay2">
+                                        <div className="subAutoPlay" id="AutoplayLogo" style={{ width: "41%", display: "flex", justifyContent: "center" }}>
+                                            <div style={{ display: "flex", alignItems: "center" }}>
+                                                <h6 style={{ color: "white" }}>Auto Bet</h6>
                                             </div>
                                             <div className="subAutoPlay" id="AutoCashOut" style={{ marginLeft: "4px" }}>
                                                 <AutoCashButton />
                                             </div>
                                         </div>
-                                        <div className="subAutoPlay" id="multiplier" style={{
-                                            marginLeft: "6px", width: "37%",
-                                            height: "100%", display: "flex", alignItems: "center", justifyContent: "center"
-                                        }}>
-                                            <input
-                                                style={{
-                                                    width: "70%",
-                                                    height: "63%",
-                                                    resize: "none",
-                                                    fontSize: "14px",
-                                                    padding: "5px",
-                                                    borderRadius: "10px",
-                                                    border: "1px solid #ccc",
-                                                    outline: "none",
-                                                    textAlign: "center",
-                                                    background: "black",
-                                                    color: "white",
-                                                    border: "none"
-                                                }}
-                                                type="number"
-                                                value={1.10}
-                                                autoFocus
-                                            />
+
+                                        <div className="subAutoPlay" id="AutoCashOut" style={{ display: "flex", alignItems: "center", width: "59%", height: "100%", justifyContent: "center" }}>
+                                            <div style={{ display: "flex", alignItems: "center" }}>
+                                                <div>
+                                                    <h6 style={{ color: "white" }}>Auto Cash Out</h6>
+                                                </div>
+                                                <div className="subAutoPlay" id="AutoCashOut" style={{ marginLeft: "4px" }}>
+                                                    <AutoCashButton />
+                                                </div>
+                                            </div>
+                                            <div className="subAutoPlay" id="multiplier" style={{
+                                                marginLeft: "6px", width: "37%",
+                                                height: "100%", display: "flex", alignItems: "center", justifyContent: "center"
+                                            }}>
+                                                <input
+                                                    style={{
+                                                        width: "70%",
+                                                        height: "63%",
+                                                        resize: "none",
+                                                        fontSize: "14px",
+                                                        padding: "5px",
+                                                        borderRadius: "10px",
+                                                        border: "1px solid #ccc",
+                                                        outline: "none",
+                                                        textAlign: "center",
+                                                        background: "black",
+                                                        color: "white",
+                                                        border: "none"
+                                                    }}
+                                                    type="number"
+                                                    value={1.10}
+                                                    autoFocus
+                                                />
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div className="sub_subAviatorMain" id="sub_subAviatorMain3" style={{ marginTop: "8px", height: betPart2Height }}>
-                            <div className="part1_sub_subAviatorMain" id="part1_sub_subAviatorMain3">
-                                <div id="MainBet" >
-                                    <div className="Bet" id="Bet1" style={{ backgroundColor: isBet2 ? "black" : "#4c4949" }}><button onClick={switchToAuto2} style={{ height: "100%", width: "100%", border: "none", backgroundColor: isBet2 ? "black" : "#4c4949", borderRadius: "50%" }}><h4 style={{ color: "white", fontSize: "2vh" }}>Bet</h4></button></div>
-                                    <div className="Bet" id="BetAuto1" style={{ backgroundColor: isBet2 ? "#4c4949" : "black" }}><button onClick={switchToAuto2} style={{ height: "100%", width: "100%", border: "none", backgroundColor: isBet2 ? "#4c4949" : "black", borderRadius: "50%" }}><h4 style={{ color: "white", fontSize: "2vh" }}>Auto</h4></button></div>
+                        <div className="BetPart2">
+                            {/* <div className="sub_subAviatorMain" id="sub_subAviatorMain3" style={{ marginTop: "8px", height: betPart2Height }}> */}
+                            <div className="sub_subAviatorMain" id="sub_subAviatorMain3">
+                                <div className="part1_sub_subAviatorMain" id="part1_sub_subAviatorMain3">
+                                    <div id="MainBet" >
+                                        <div className="Bet" id="Bet1" style={{ backgroundColor: isBet2 ? "black" : "#4c4949" }}><button onClick={switchToAuto2} style={{ height: "100%", width: "100%", border: "none", backgroundColor: isBet2 ? "black" : "#4c4949", borderRadius: "50%" }}><h4 style={{ color: "white", fontSize: "2vh" }}>Bet</h4></button></div>
+                                        <div className="Bet" id="BetAuto1" style={{ backgroundColor: isBet2 ? "#4c4949" : "black" }}><button onClick={switchToAuto2} style={{ height: "100%", width: "100%", border: "none", backgroundColor: isBet2 ? "#4c4949" : "black", borderRadius: "50%" }}><h4 style={{ color: "white", fontSize: "2vh" }}>Auto</h4></button></div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="part2_sub_subAviatorMain" id="part1_sub_subAviatorMain3">
-                                <div className="BetButtonIncrease" id="BetButtonIncrease1">
-                                    <div className="BetButtonIncrease11">
-                                        <div style={{
-                                            width: "3vh", height: "3vh", border: "1px solid black", borderRadius: "50%", borderColor: "#ffffff80", display: "flex",
-                                            justifyContent: "center",
-                                            alignItems: "center"
-                                        }}><button onClick={decreaseBet2} style={{ color: "#ffffff80", backgroundColor: "black", width: "100%", height: "100%", borderRadius: "50%", border: "none" }}><h2 style={{ fontSize: "2vh" }}>-</h2></button></div>
-                                        <div>
+                                <div className="part2_sub_subAviatorMain" id="part1_sub_subAviatorMain3">
+                                    <div className="BetButtonIncrease" id="BetButtonIncrease1">
+                                        <div className="BetButtonIncrease11">
+                                            <div style={{
+                                                width: "3vh", height: "3vh", border: "1px solid black", borderRadius: "50%", borderColor: "#ffffff80", display: "flex",
+                                                justifyContent: "center",
+                                                alignItems: "center"
+                                            }}><button onClick={decreaseBet2} style={{ color: "#ffffff80", backgroundColor: "black", width: "100%", height: "100%", borderRadius: "50%", border: "none" }}><h2 style={{ fontSize: "2vh" }}>-</h2></button></div>
                                             <div>
-                                                {isEditing2 ? (
-                                                    <input
-                                                        style={{
-                                                            width: "62px",
-                                                            height: "25px",
-                                                            resize: "none",
-                                                            fontSize: "14px",
-                                                            padding: "5px",
-                                                            borderRadius: "5px",
-                                                            border: "1px solid #ccc",
-                                                            outline: "none",
-                                                            textAlign: "center",
-                                                        }}
-                                                        type="number"
-                                                        value={betAmount2}
-                                                        onChange={handleChange2}
-                                                        onBlur={handleBlur2}
-                                                        autoFocus
-                                                    />
-                                                ) : (
-                                                    <h3 style={{ color: "white", fontSize: "2vh" }} onClick={handleClick2} >{Number(secondBetValue).toFixed(2)}</h3>
+                                                <div>
+                                                    {isEditing2 ? (
+                                                        <input
+                                                            style={{
+                                                                width: "62px",
+                                                                height: "25px",
+                                                                resize: "none",
+                                                                fontSize: "14px",
+                                                                padding: "5px",
+                                                                borderRadius: "5px",
+                                                                border: "1px solid #ccc",
+                                                                outline: "none",
+                                                                textAlign: "center",
+                                                            }}
+                                                            type="number"
+                                                            value={betAmount2}
+                                                            onChange={handleChange2}
+                                                            onBlur={handleBlur2}
+                                                            autoFocus
+                                                        />
+                                                    ) : (
+                                                        <h3 style={{ color: "white", fontSize: "2vh" }} onClick={handleClick2} >{Number(secondBetValue).toFixed(2)}</h3>
 
-                                                )}
+                                                    )}
+                                                </div>
+                                            </div>
+                                            <div style={{
+                                                width: "3vh", height: "3vh", border: "1px solid black", borderRadius: "50%", borderColor: "#ffffff80", display: "flex",
+                                                justifyContent: "center",
+                                                alignItems: "center"
+                                            }}><button onClick={increaseBet2} style={{ color: "#ffffff80", backgroundColor: "black", width: "100%", height: "100%", borderRadius: "50%", border: "none" }}><h2 style={{ fontSize: "2vh" }}>+</h2></button></div>
+                                        </div>
+                                        <div className="BetButtonIncrease12">
+                                            <div className="BetButtonIncrease12_part">
+                                                <div style={{
+                                                    width: "68%",
+                                                    height: "100%",
+                                                    border: "1px solid black",
+                                                    borderRadius: "10px",
+                                                    display: "flex",
+                                                    justifyContent: "center",
+                                                    alignItems: "center",
+                                                    color: "#ffffff80",
+                                                    backgroundColor: "black",
+                                                }}>
+                                                    <h1 style={{ fontSize: "2vh" }}>50.00</h1>
+                                                </div>
+
+                                                <div style={{
+                                                    width: "68%",
+                                                    height: "100%",
+                                                    border: "1px solid black",
+                                                    borderRadius: "10px",
+                                                    display: "flex",
+                                                    justifyContent: "center",
+                                                    alignItems: "center",
+                                                    color: "#ffffff80",
+                                                    backgroundColor: "black",
+                                                }}>
+                                                    <h1 style={{ fontSize: "2vh" }}>100.00</h1>
+                                                </div>
+                                            </div>
+                                            <div className="BetButtonIncrease12_part">
+                                                <div style={{
+                                                    width: "68%",
+                                                    height: "100%",
+                                                    border: "1px solid black",
+                                                    borderRadius: "10px",
+                                                    display: "flex",
+                                                    justifyContent: "center",
+                                                    alignItems: "center",
+                                                    color: "#ffffff80",
+                                                    backgroundColor: "black",
+                                                }}>
+                                                    <h1 style={{ fontSize: "2vh" }}>150.00</h1>
+                                                </div>
+                                                <div style={{
+                                                    width: "68%",
+                                                    height: "100%",
+                                                    border: "1px solid black",
+                                                    borderRadius: "10px",
+                                                    display: "flex",
+                                                    justifyContent: "center",
+                                                    alignItems: "center",
+                                                    color: "#ffffff80",
+                                                    backgroundColor: "black"
+                                                }}>
+                                                    <h1 style={{ fontSize: "2vh" }}>200.00</h1>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div style={{
-                                            width: "3vh", height: "3vh", border: "1px solid black", borderRadius: "50%", borderColor: "#ffffff80", display: "flex",
-                                            justifyContent: "center",
-                                            alignItems: "center"
-                                        }}><button onClick={increaseBet2} style={{ color: "#ffffff80", backgroundColor: "black", width: "100%", height: "100%", borderRadius: "50%", border: "none" }}><h2 style={{ fontSize: "2vh" }}>+</h2></button></div>
                                     </div>
-                                    <div className="BetButtonIncrease12">
-                                        <div className="BetButtonIncrease12_part">
-                                            <div style={{
-                                                width: "68%",
-                                                height: "100%",
-                                                border: "1px solid black",
-                                                borderRadius: "10px",
-                                                display: "flex",
-                                                justifyContent: "center",
-                                                alignItems: "center",
-                                                color: "#ffffff80",
-                                                backgroundColor: "black",
-                                            }}>
-                                                <h1 style={{ fontSize: "2vh" }}>50.00</h1>
-                                            </div>
+                                    <div className="BetButton" id="BetButton1">
+                                        {!addMoneyClicked2 ? (
+                                            <button
+                                                className="BetOnClick"
+                                                style={{ width: "85%", height: "83%" }}
+                                                onClick={addMoney2}
+                                                disabled={balance < 2 || secondBetValue > balance || !waiting || moneyDeducted2 || addMoneyClicked2}
+                                            >
+                                                <h1 style={{ fontSize: "3vh" }}>{Number(secondBetValue).toFixed(2)} <span>INR</span></h1>
+                                            </button>
+                                        ) : (
+                                            <button
+                                                className="BetOnClick"
+                                                style={{ width: "85%", height: "83%" }}
+                                                onClick={collectMoney2}
+                                                disabled={!canCollect2 || waiting || addedMoney2 === 0}
+                                            >
+                                                {waiting ? <h1>Wait...</h1> : canCollect2 ? <div><h2 style={{ fontSize: "3vh" }}>CASH OUT</h2> <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}><h2 style={{ fontSize: "3vh" }}>{Number(money2).toFixed(2)}</h2><h2 style={{ marginLeft: "4px", fontSize: "3vh" }}>INR</h2></div></div> : <h1>Collected</h1>}
 
-                                            <div style={{
-                                                width: "68%",
-                                                height: "100%",
-                                                border: "1px solid black",
-                                                borderRadius: "10px",
-                                                display: "flex",
-                                                justifyContent: "center",
-                                                alignItems: "center",
-                                                color: "#ffffff80",
-                                                backgroundColor: "black",
-                                            }}>
-                                                <h1 style={{ fontSize: "2vh" }}>100.00</h1>
-                                            </div>
-                                        </div>
-                                        <div className="BetButtonIncrease12_part">
-                                            <div style={{
-                                                width: "68%",
-                                                height: "100%",
-                                                border: "1px solid black",
-                                                borderRadius: "10px",
-                                                display: "flex",
-                                                justifyContent: "center",
-                                                alignItems: "center",
-                                                color: "#ffffff80",
-                                                backgroundColor: "black",
-                                            }}>
-                                                <h1 style={{ fontSize: "2vh" }}>150.00</h1>
-                                            </div>
-                                            <div style={{
-                                                width: "68%",
-                                                height: "100%",
-                                                border: "1px solid black",
-                                                borderRadius: "10px",
-                                                display: "flex",
-                                                justifyContent: "center",
-                                                alignItems: "center",
-                                                color: "#ffffff80",
-                                                backgroundColor: "black"
-                                            }}>
-                                                <h1 style={{ fontSize: "2vh" }}>200.00</h1>
-                                            </div>
-                                        </div>
+                                            </button>
+                                        )}
                                     </div>
                                 </div>
-                                <div className="BetButton" id="BetButton1">
-                                    {!addMoneyClicked2 ? (
-                                        <button
-                                            className="BetOnClick"
-                                            style={{ width: "85%", height: "83%" }}
-                                            onClick={addMoney2}
-                                            disabled={balance < 2 || secondBetValue > balance || !waiting || moneyDeducted2 || addMoneyClicked2}
-                                        >
-                                            <h1 style={{ fontSize: "3vh" }}>{Number(secondBetValue).toFixed(2)} <span>INR</span></h1>
-                                        </button>
-                                    ) : (
-                                        <button
-                                            className="BetOnClick"
-                                            style={{ width: "85%", height: "83%" }}
-                                            onClick={collectMoney2}
-                                            disabled={!canCollect2 || waiting || addedMoney2 === 0}
-                                        >
-                                            {waiting ? <h1>Wait...</h1> : canCollect2 ? <div><h2 style={{ fontSize: "3vh" }}>CASH OUT</h2> <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}><h2 style={{ fontSize: "3vh" }}>{Number(money2).toFixed(2)}</h2><h2 style={{ marginLeft: "4px", fontSize: "3vh" }}>INR</h2></div></div> : <h1>Collected</h1>}
-
-                                        </button>
-                                    )}
-                                </div>
-                            </div>
-                            <div className="AutoPlay" style={{ display: autoPlayDisplay2, backgroundColor: "#4c4949" }}>
-                                <div className="AutoPlay2">
-                                    <div className="subAutoPlay" id="AutoplayLogo" style={{ width: "41%", display: "flex", justifyContent: "center" }}>
-                                        <div style={{ display: "flex", alignItems: "center" }}>
-                                            <h6 style={{ color: "white" }}>Auto Bet</h6>
-                                        </div>
-                                        <div className="subAutoPlay" id="AutoCashOut" style={{ marginLeft: "4px" }}>
-                                            <AutoCashButton />
-                                        </div>
-                                    </div>
-
-                                    <div className="subAutoPlay" id="AutoCashOut" style={{ display: "flex", alignItems: "center", width: "59%", height: "100%", justifyContent: "center" }}>
-                                        <div style={{ display: "flex", alignItems: "center" }}>
-                                            <div>
-                                                <h6 style={{ color: "white" }}>Auto Cash Out</h6>
+                                <div className="AutoPlay" style={{ display: autoPlayDisplay2, backgroundColor: "#4c4949" }}>
+                                    <div className="AutoPlay2">
+                                        <div className="subAutoPlay" id="AutoplayLogo" style={{ width: "41%", display: "flex", justifyContent: "center" }}>
+                                            <div style={{ display: "flex", alignItems: "center" }}>
+                                                <h6 style={{ color: "white" }}>Auto Bet</h6>
                                             </div>
                                             <div className="subAutoPlay" id="AutoCashOut" style={{ marginLeft: "4px" }}>
                                                 <AutoCashButton />
                                             </div>
                                         </div>
-                                        <div className="subAutoPlay" id="multiplier" style={{
-                                            marginLeft: "6px", width: "37%",
-                                            height: "100%", display: "flex", alignItems: "center", justifyContent: "center"
-                                        }}>
-                                            <input
-                                                style={{
-                                                    width: "70%",
-                                                    height: "63%",
-                                                    resize: "none",
-                                                    fontSize: "14px",
-                                                    padding: "5px",
-                                                    borderRadius: "10px",
-                                                    border: "1px solid #ccc",
-                                                    outline: "none",
-                                                    textAlign: "center",
-                                                    background: "black",
-                                                    color: "white",
-                                                    border: "none"
-                                                }}
-                                                type="number"
-                                                value={1.10}
-                                                autoFocus
-                                            />
+
+                                        <div className="subAutoPlay" id="AutoCashOut" style={{ display: "flex", alignItems: "center", width: "59%", height: "100%", justifyContent: "center" }}>
+                                            <div style={{ display: "flex", alignItems: "center" }}>
+                                                <div>
+                                                    <h6 style={{ color: "white" }}>Auto Cash Out</h6>
+                                                </div>
+                                                <div className="subAutoPlay" id="AutoCashOut" style={{ marginLeft: "4px" }}>
+                                                    <AutoCashButton />
+                                                </div>
+                                            </div>
+                                            <div className="subAutoPlay" id="multiplier" style={{
+                                                marginLeft: "6px", width: "37%",
+                                                height: "100%", display: "flex", alignItems: "center", justifyContent: "center"
+                                            }}>
+                                                <input
+                                                    style={{
+                                                        width: "70%",
+                                                        height: "63%",
+                                                        resize: "none",
+                                                        fontSize: "14px",
+                                                        padding: "5px",
+                                                        borderRadius: "10px",
+                                                        border: "1px solid #ccc",
+                                                        outline: "none",
+                                                        textAlign: "center",
+                                                        background: "black",
+                                                        color: "white",
+                                                        border: "none"
+                                                    }}
+                                                    type="number"
+                                                    value={1.10}
+                                                    autoFocus
+                                                />
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="subAviatorMain" id="subAviatorMain4"></div>
+                    {/* <div className="subAviatorMain" id="subAviatorMain4"></div> */}
                 </div >
             </div>
 
-            {/* <div className="anotheSideBox">
-                {[1, 1, 1, 1, 1, 1, 1, 1].map(() => {
-                    return (
-                        <div style={{height:"10%",width:"100%",border:"1px solid black"}}>
-                            <h1>hii</h1>
-                        </div>
-                    );
-                })}
-
-            </div> */}
         </div >
     )
 }

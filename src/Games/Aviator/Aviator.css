@@ -21,9 +21,11 @@
     height: 45%;
     background-color: #3b3f47;
 }
+.maintainHeight{
+    height: 10%;
+}
 
-
-@media (max-width: 768px) {
+@media (min-width: 415px) and (max-width: 768px)  {
     .MainBox {
         flex-direction: column-reverse;
         /* height: 199vh;  */
@@ -33,7 +35,28 @@
         height: 90%;
         width:100%;
     }
+    #subAviatorMain3 {
+        display: flex;
+    }
+    .BetPart1 {
+        height: 70%;
+    }
+    .BetPart2 {
+        height: 70%;
+    }
+    .maintainHeight{
+        height: 0%;
+    }
+    
 }
+
+@media (max-width: 412px)  {
+    .MainBox {
+
+        height: 136vh;   
+    }
+}
+
 @media (max-width: 1024px) {
     .MainBox {
         flex-direction: column-reverse;
@@ -112,13 +135,18 @@
 }
 
 #subAviatorMain3 {
-    height: 40%;
+    /* height: 40%;
+    width: 100%; */
+
+    height: 24%;
     width: 100%;
     /* border:1px solid black; */
+
+    /* display: flex; */
 }
 
 .sub_subAviatorMain {
-    height: 55%;
+    height: 100%;
     width: 100%;
     /* border:1px solid black; */
 }
@@ -139,7 +167,14 @@
     display: flex;
     flex-direction: column;
 }
-
+.BetPart1{
+    height: 100%;
+    width: 100%;
+}
+.BetPart2{
+    height: 100%;
+    width: 100%;
+}
 .AutoPlay {
     border: 3px solid #3b3f47;
     height: 26%;
