@@ -45,7 +45,7 @@ const Home = () => {
                 {/* <CiCirclePlus style={{color:"white",width:"64%",height:"64%"}}/> */}
 
                 <button style={{ width: "100%", height: "100%", borderRadius: "13px" }}>
-                  <Link to="/Eleven" style={{ width: "100%", height: "100%", borderRadius: "13px", textDecoration: "none" }}>
+                  <Link to="/Payments" style={{ width: "100%", height: "100%", borderRadius: "13px", textDecoration: "none" }}>
                     DEPOSIT
                   </Link>
                 </button>
