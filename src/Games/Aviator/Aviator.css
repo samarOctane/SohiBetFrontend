@@ -55,17 +55,17 @@
         border: 1px solid white;
         border-radius: 10px;
     }
-    #subAviatorMain1 {
-        height: 8%;
-    }
+    /* #subAviatorMain1 {
+        height: 7%;
+    } */
     .maintainHeight {
         height: 0%;
     }
     #subAviatorMain2 {
-        height: 51% !important;
+        height: 49% !important;
     }
     #subAviatorMain3 {
-        height: 35% !important;
+        height: 38% !important;
     }
 }
 

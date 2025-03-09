@@ -10,6 +10,7 @@ import PredictionHistory from './PredictionHistory';
 import WaitProgress from './WaitProgress';
 import { CgProfile } from "react-icons/cg";
 import MoneyInput from '../../UserMoney/MoneyInput';
+import Home from '../../Home/Home';
 
 const Aviator = ({ increaserFirstEarned, earnedFirst, handleBlur2, betAmount2, isEditing2, handleClick2, handleChange2, betAmount1, isEditing, handleBlur1, handleChange1, handleClick1, addMoney2, money2, addedMoney2, canCollect2, collectMoney2, moneyDeducted2, addMoneyClicked2, firstBetValue, secondBetValue, increaseBet1, increaseBet2, decreaseBet1, decreaseBet2, money, addedMoney, balance, addMoney, collectMoney, multiplier, waiting, addMoneyClicked, moneyDeducted, canCollect }) => {
 
@@ -68,6 +69,7 @@ const Aviator = ({ increaserFirstEarned, earnedFirst, handleBlur2, betAmount2, i
     return (
         <div className="MainBox">
             <div>
+                {/* <Home balance={balance}/> */}
                 <MoneyInput balance={balance} fetchMoney={fetchMoney} />
 
             </div>
@@ -103,7 +105,6 @@ const Aviator = ({ increaserFirstEarned, earnedFirst, handleBlur2, betAmount2, i
                                 display: "flex", justifyContent: "center",
                                 alignItems: "center"
                             }}><div id="money">
-                                    {/* <h4 style={{ margin: "0", color: "#42f54b", fontSize: "3vh" }}>{savedMoney !== null ? `${savedMoney.toFixed(2)}` : "Loading..."}</h4> */}
 
                                     <h4 style={{ margin: "0", color: "#42f54b", fontSize: "3vh" }}>{balance.toFixed(2)}</h4>
 

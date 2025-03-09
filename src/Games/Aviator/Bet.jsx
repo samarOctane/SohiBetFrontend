@@ -1,5 +1,6 @@
 import { useState, useEffect,useCallback } from "react";
 import Aviator from "./Aviator";
+import Home from "../../Home/Home";
 
 const Bet=()=>{
 
@@ -188,6 +189,7 @@ const Bet=()=>{
 
     return (
         <div >
+            
             <Aviator increaserFirstEarned={increaserFirstEarned} earnedFirst={earnedFirst} handleBlur2={handleBlur2} betAmount2={betAmount2} isEditing2={isEditing2} handleClick2={handleClick2} handleChange2={handleChange2} betAmount1={betAmount1} isEditing={isEditing} handleBlur1={handleBlur1} handleChange1={handleChange1} handleClick1={handleClick1} addMoney2={addMoney2} money2={money2} addedMoney2={addedMoney2} canCollect2={canCollect2} collectMoney2={collectMoney2} secondBetValue={secondBetValue} moneyDeducted2={moneyDeducted2} addedMoney2={addedMoney2} addMoneyClicked2={addMoneyClicked2} firstBetValue={firstBetValue} secondBetValue={secondBetValue} increaseBet1={increaseBet1} increaseBet2={increaseBet2} decreaseBet1={decreaseBet1} decreaseBet2={decreaseBet2} money={money} addedMoney={addedMoney} balance={balance} addMoney={addMoney1} collectMoney={collectMoney1} multiplier={multiplier} waiting={waiting} addMoneyClicked={addMoneyClicked} moneyDeducted={moneyDeducted} canCollect={canCollect} />
         </div>
     );

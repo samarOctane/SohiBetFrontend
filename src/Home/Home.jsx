@@ -1,4 +1,4 @@
-import React from 'react'
+import { React, useContext } from "react";
 import { Link } from 'react-router-dom';
 import './Home.css'
 import { FaRupeeSign } from "react-icons/fa";
@@ -12,15 +12,19 @@ import { IoDiamondOutline } from "react-icons/io5";
 import { FcAutomatic } from "react-icons/fc";
 import { FcApproval } from "react-icons/fc";
 import { RiAccountCircleLine } from "react-icons/ri";
+import MoneyInput from '../UserMoney/MoneyInput';
+import { BalanceContext } from "../UserMoney/BalanceContext";
+import { CiCirclePlus } from "react-icons/ci";
 
 const Home = () => {
+  const { balance, setBalance } = useContext(BalanceContext);
   return (
     <>
       <div className="HomeMain">
         <div className="header">
           <div className="subHeader" id="subHeader1">
             <div className="profile">
-              <RiAccountCircleLine id="profile"/>
+              <RiAccountCircleLine id="profile" />
             </div>
             <div className="diamond">
               <IoDiamondOutline id="diamond" />
@@ -30,22 +34,33 @@ const Home = () => {
             </div>
           </div>
           <div className="subHeader" id="subHeader2">
-            {/* <div id="money"><FaRupeeSign id="rupee" /><h2 style={{ margin: "0" }}>0.00</h2></div> */}
+            <div style={{ display: "flex", alignItems: 'center', justifyContent: "center" }}>
+              <h4 style={{ margin: "0", color: "#42f54b", fontSize: "3vh" }}>{balance.toFixed(2)}</h4>
+              <h4 style={{ marginLeft: "4px", color: "white", marginTop: "1px", fontSize: "2vh" }}>INR</h4>
+            </div>
           </div>
           <div className="subHeader" id="subHeader3">
-            <div className="subHeader3Child" id="notification">
-              <IoNotificationsOutline id="notification_Icon" />
+            <div style={{ display: "flex", alignItems: 'center', justifyContent: "center", height: "100%" }}>
+              <div style={{ display: "flex", alignItems: 'center', width: "100%", height: "50%" }}>
+                {/* <CiCirclePlus style={{color:"white",width:"64%",height:"64%"}}/> */}
+
+                <button style={{ width: "100%", height: "100%", borderRadius: "13px" }}>
+                  <Link to="/Eleven" style={{ width: "100%", height: "100%", borderRadius: "13px", textDecoration: "none" }}>
+                    DEPOSIT
+                  </Link>
+                </button>
+              </div>
             </div>
             <div className="subHeader3Child">
 
             </div>
-            <div className="subHeader3Child">
-              <FcApproval id="verifiedIcon" />
+            <div className="subHeader3Child" id="notification">
+              <IoNotificationsOutline id="notification_Icon" />
             </div>
           </div>
         </div>
         <div className="body">
-                                                {/* Trending */}
+          {/* Trending */}
           <div className="subBody">
             <div className="subBodyChild" id="subBodyChildHeading">
               <MdOutlineLocalFireDepartment id="trending" />
@@ -65,7 +80,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-                                                {/* For You */}
+          {/* For You */}
           <div className="subBody">
             <div className="subBodyChild" id="subBodyChildHeading">
               <LuCrown id="crown" />
@@ -73,8 +88,8 @@ const Home = () => {
             </div>
             <div className="subBodyChild" id="subBodyChildGame">
               <div className="AllGame" id="snake">
-              <a href="https://ajeet0486.github.io/Snake-Game/"><button style={{ width: "100%", height: "100%", opacity: "0"}}></button></a>
-                  
+                <a href="https://ajeet0486.github.io/Snake-Game/"><button style={{ width: "100%", height: "100%", opacity: "0" }}></button></a>
+
               </div>
             </div>
           </div>
