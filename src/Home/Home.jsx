@@ -42,13 +42,9 @@ const Home = () => {
           <div className="subHeader" id="subHeader3">
             <div style={{ display: "flex", alignItems: 'center', justifyContent: "center", height: "100%" }}>
               <div style={{ display: "flex", alignItems: 'center', width: "100%", height: "50%" }}>
-                {/* <CiCirclePlus style={{color:"white",width:"64%",height:"64%"}}/> */}
-
-                <button style={{ width: "100%", height: "100%", borderRadius: "13px" }}>
-                  <Link to="/Payments" style={{ width: "100%", height: "100%", borderRadius: "13px", textDecoration: "none" }}>
-                    DEPOSIT
-                  </Link>
-                </button>
+                <Link to="/Payments" className="deposit-btn">
+                  DEPOSIT
+                </Link>
               </div>
             </div>
             <div className="subHeader3Child">
