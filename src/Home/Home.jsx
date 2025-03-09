@@ -24,7 +24,9 @@ const Home = () => {
         <div className="header">
           <div className="subHeader" id="subHeader1">
             <div className="profile">
-              <RiAccountCircleLine id="profile" />
+              <Link to="/Signup" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+                <CgProfile id="profile" />
+              </Link>
             </div>
             <div className="diamond">
               <IoDiamondOutline id="diamond" />

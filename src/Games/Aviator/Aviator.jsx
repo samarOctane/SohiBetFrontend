@@ -98,6 +98,9 @@ const Aviator = ({ increaserFirstEarned, earnedFirst, handleBlur2, betAmount2, i
                             <div>
                                 <h2 style={{ color: "red" }}>Aviator</h2>
                             </div>
+                            <div style={{width:"40%",height:"100%"}}>
+
+                            </div>
                         </div>
 
                         <div id="subAviatorMain1_part2">
@@ -109,11 +112,7 @@ const Aviator = ({ increaserFirstEarned, earnedFirst, handleBlur2, betAmount2, i
                                     <h4 style={{ margin: "0", color: "#42f54b", fontSize: "3vh" }}>{balance.toFixed(2)}</h4>
 
                                     <h4 style={{ marginLeft: "4px", color: "white", marginTop: "1px", fontSize: "2vh" }}>INR</h4></div></div>
-                            <div className="profile">
-                                <Link to="/Signup" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-                                    <CgProfile id="profile" />
-                                </Link>
-                            </div>
+
                             <div style={{
                                 display: "flex", justifyContent: "center",
                                 alignItems: "center"

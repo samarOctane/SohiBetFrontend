@@ -8,7 +8,7 @@ import UsersAccount from "../../Games/Aviator/UsersAccounts/UsersAccount";
 const Signup = () => {
   const [message, setMessage] = useState("");
 
-  const [user, setUser] = useState({ username: "", email: "", password: "" });
+  const [user, setUser] = useState({ username: "", email: "", password: "", money: "" });
 
   const handleChange = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value });
@@ -17,7 +17,8 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("https://sohibetbackend.onrender.com/signup", {
+      // const response = await fetch("https://sohibetbackend.onrender.com/signup", {
+      const response = await fetch("http://localhost:5000/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -40,10 +41,20 @@ const Signup = () => {
   return (
     <div className="signup-container">
 
-      {message ? <UsersAccount/> :
+      {message ? <h1>hii</h1>:
         <div className="signup-box">
           <h2 className="signup-title">Signup</h2>
           <form onSubmit={handleSubmit} className="signup-form">
+            <input
+              type="number"
+              name="money"
+              placeholder="Money"
+              value={user.money}
+              onChange={handleChange}
+              required
+              className="signup-input"
+              // style={{ display: "none" }}
+            />
             <input
               type="text"
               name="username"
